@@ -42,6 +42,12 @@ const { Option } = Select;
   };
 })
 class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.formRef = React.createRef();
+    console.log(this.formRef);
+  }
+
   handleSubmit = e => {
     e.preventDefault();
     console.log(e);
@@ -57,7 +63,8 @@ class Contact extends React.Component {
   };
 
   onReset = () => {
-    this.formRef.current.resetFields();
+    console.log(this.props.form);
+    this.props.form.resetFields();
   };
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -72,7 +79,7 @@ class Contact extends React.Component {
             src={iconImgUrl}>
           </img>
         </AppLayout>
-        <Form {...layout}  name="control-ref" onSubmit={this.handleSubmit}>
+        <Form {...layout} ref={this.formRef} name="control-ref" onSubmit={this.handleSubmit}>
           <Form.Item
             label='Name'
           >
