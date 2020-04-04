@@ -22,6 +22,8 @@ class App extends Component {
   constructor(props) {
     super(props);
   }
+  // only home page and contact work, if an user input other tabs,
+  // it will go to 404 not found page.
   render() {
     const { user, resume } = this.props;
     return (

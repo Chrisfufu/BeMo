@@ -32,14 +32,12 @@ var headerStyle = {
 
 
 function AppHeader() {
-  // const Window = WindowStore.useContainer()
-  // const Auth = AuthStore.useContainer()
   let history = useHistory();
 
   // if header clicked, return to home page
   let handleIconOnClick = () => {
-    if (window.location.pathname !== '/home') {
-      history.push('/home')
+    if (window.location.pathname !== '/') {
+      history.push('/')
     }
   }
   // the following is the header logo

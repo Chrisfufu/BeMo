@@ -36,6 +36,8 @@ const tailLayout = {
   },
 };
 const { Option } = Select;
+
+// connecting to store, send question to backend.
 @connect((store) => {
   return {
     sent: store.user.sent,
@@ -48,22 +50,19 @@ class Contact extends React.Component {
     console.log(this.formRef);
   }
 
+  // this is the form submit button.
+  // send values to action.
   handleSubmit = e => {
     e.preventDefault();
-    console.log(e);
     this.props.form.validateFields((err, values) => {
       if (!err) {
         this.props.dispatch(snedQuestion(values))
-        console.log(values);
       }
     });
   };
-  onFinish = values => {
-    console.log(values);
-  };
 
+  // reset button. reset the form
   onReset = () => {
-    console.log(this.props.form);
     this.props.form.resetFields();
   };
   render() {

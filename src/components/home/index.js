@@ -12,6 +12,7 @@ import Background from "./cda-interview-guide.jpg"
 import { Typography } from 'antd';
 const { Title } = Typography;
 
+// background img.
 var sectionStyle = {
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -21,6 +22,7 @@ var sectionStyle = {
   backgroundImage: `url(${Background})`
 };
 
+// this is not a dynamic page. everything is loaded at once.
 class Home extends React.Component {
 
   render() {

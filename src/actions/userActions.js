@@ -1,10 +1,10 @@
 import axios from 'axios';
 // import jwt_decode from 'jwt-decode';
 import { URL_PREFIX } from './utils';
-import setAuthorizationToken from './setAuthorizationToken';
 
 export function snedQuestion(data) {
 
+  // this is the action that associated with post an question.catch((err) => {})
   return function(dispatch) {
     dispatch({type: "SEND_QUESTION"});
     axios(URL_PREFIX + "/api/contact/", {

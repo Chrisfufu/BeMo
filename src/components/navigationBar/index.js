@@ -40,7 +40,8 @@ class AppNavigationBar extends React.Component {
       current: e.key,
     });
   };
-
+  // only the Main and contact work according to the requirements.
+  // if an user clicks on other tabs, it will just go to home page.
   render() {
     return (
       <Menu onClick={this.handleClick} mode="horizontal">
