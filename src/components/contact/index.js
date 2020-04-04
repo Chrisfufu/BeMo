@@ -69,11 +69,11 @@ class Contact extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div>
-        <AppLayout style={{overflow: "auto"}} className="layout">
+        <AppLayout style={{overflow: "auto"}} >
           <img
             style={{
-              maxHeight:"100%",
-              maxWidth:"100%"
+              width: '100%',
+              height: "auto"
             }}
             src={iconImgUrl}>
           </img>
