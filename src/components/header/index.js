@@ -3,11 +3,11 @@
  */
 import React from 'react';
 import { useHistory } from "react-router-dom";
-
+import Image from 'react-image-webp';
 import './style.css'
 
 // hearder url
-const iconImgUrl = process.env.PUBLIC_URL + '/bemo-logo2.png'
+const iconImgUrl = process.env.PUBLIC_URL + '/bemo-logo2.jpg'
 
 var iconStyle = {
   pc: {
