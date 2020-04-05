@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import { useHistory } from "react-router-dom";
-import Image from 'react-image-webp';
 import './style.css'
 
 // hearder url
